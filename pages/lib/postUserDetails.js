@@ -1,4 +1,4 @@
-export const postData = async(data)=>{
+export async function postData(data){
     try{
         const get = await fetch('http://localhost:3000/api/users',{
         method :"POST",
