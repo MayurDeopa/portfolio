@@ -6,7 +6,7 @@ const Project =(props)=>{
     const {details} = props
     return (
         <div className={styles.project}>
-                <img src={details.image} className={styles.project_image}/>
+                <img src={details.image} className={styles.project_image} alt=''/>
                 <section className={styles.project_details}>
                     <section className={styles.project_details_sub_section}>
                         <header className={styles.project_header}>
