@@ -13,10 +13,10 @@ const Navbar=()=>{
     ]
     return(
         <nav className={styles.navbar}>
-            <h3><Link href='/'><a href='/'>Mayur Deopa</a></Link></h3>
+            <h3><Link href='/'>Mayur Deopa</Link></h3>
             <ul className={isVisible?`${styles.nav_ul} ${styles.visible}`:styles.nav_ul}>
                 {navItems.map((item,index)=>{
-                    return (<li key={index} onClick={()=>setIsVisible(false)}><div className={styles.underline}></div><Link href={item.link}><a href={item.link}>{item.title}</a></Link></li>)
+                    return (<li key={index} onClick={()=>setIsVisible(false)}><div className={styles.underline}></div><Link href={item.link}>{item.title}</Link></li>)
                 })}
             </ul>
             <button className={isVisible?`${styles.burger} ${styles.rotate}`:styles.burger} onClick={()=>setIsVisible(!isVisible)}>
