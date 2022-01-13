@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styles from '../styles/Contact.module.css'
-import { postData } from "./lib/postUserDetails";
 import MiniSpinner from "../components/MiniSpinner"
+import { postData } from "../lib/postUserDetails";
 
 const Contact =()=>{
     const [isLoading , setIsLoading]  = useState(false)

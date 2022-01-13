@@ -1,10 +1,11 @@
-import dbConnect from "../lib/dbConnect";
-import userEmails from '../models/users'
+import dbConnect from '../../lib/dbConnect'
+import userEmails from '../../lib/models/users'
+
 
 export default async function handler (req, res) {
     const { method } = req
   
-    await dbConnect()
+    await dbConnect
   
     switch (method) {
       case 'GET':
