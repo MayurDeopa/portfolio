@@ -19,7 +19,7 @@ export default async function handler (req, res) {
       case 'POST':
         try {
           const user = await userEmails.create(req.body)
-          res.status(201).send({ success: true, data: user })
+          res.status(201).send({ success: true})
         } catch (error) {
           res.status(400).send({ success: false,err:error })
         }
