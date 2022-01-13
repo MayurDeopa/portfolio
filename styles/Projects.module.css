@@ -8,6 +8,10 @@
     border-radius: 4px;
 }
 
+.project_image_container{
+    max-height: 100%;
+}
+
 .project_image{
     width: 100%;
 }

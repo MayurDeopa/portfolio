@@ -6,7 +6,9 @@ const Project =(props)=>{
     const {details} = props
     return (
         <div className={styles.project}>
-                <img src={details.image} className={styles.project_image} alt=''/>
+            <div className={styles.project_image_container}>
+                <Image src={details.image} className={styles.project_image} layout='intrinsic' width={500} height={300} alt=''/>
+            </div>
                 <section className={styles.project_details}>
                     <section className={styles.project_details_sub_section}>
                         <header className={styles.project_header}>
