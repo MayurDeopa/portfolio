@@ -21,7 +21,7 @@ export default async function handler (req, res) {
           const user = await userEmails.create(req.body)
           res.status(201).send({ success: true, data: user })
         } catch (error) {
-          res.status(400).send({ success: false })
+          res.status(400).send({ success: false,err:error })
         }
         break
       default:
