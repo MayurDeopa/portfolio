@@ -1,4 +1,4 @@
-export async function postData(data){
+export  async function postData(data){
     try{
         const get = await fetch('http://localhost:3000/api/users',{
         method :"POST",
@@ -12,3 +12,4 @@ export async function postData(data){
         return  err
     }
 }
+
