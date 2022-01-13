@@ -1,0 +1,17 @@
+.home_page{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 100%;
+    animation-name: drop;
+    animation-duration: 1s;
+}
+
+.home_sections{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    min-height: 20rem;
+    width: min(30rem,100%);
+}
+
