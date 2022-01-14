@@ -1,10 +1,11 @@
-import dbConnect from "../lib/dbConnect";
-import userEmails from '../models/users'
+import dbConnect from '../../lib/dbConnect'
+import userEmails from '../../lib/models/users'
+
 
 export default async function handler (req, res) {
     const { method } = req
   
-    await dbConnect()
+    await dbConnect
   
     switch (method) {
       case 'GET':
@@ -18,9 +19,9 @@ export default async function handler (req, res) {
       case 'POST':
         try {
           const user = await userEmails.create(req.body)
-          res.status(201).json({ success: true, data: user })
+          res.status(201).send({ success: true})
         } catch (error) {
-          res.status(400).json({ success: false })
+          res.status(400).send({ success: false,err:error })
         }
         break
       default:
