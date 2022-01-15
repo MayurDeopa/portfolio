@@ -11,14 +11,15 @@ const Contact =()=>{
         message:""
     })
     const submit =async(e)=>{
-        setIsLoading(true)
         e.preventDefault()
+        setIsLoading(true)
         const res = await postData(contactInfo)
         setIsLoading(false)
         console.log(res)
     }
     return (
         <div className="page">
+            <div className={styles.contact_page}>
             <form className={styles.form}>
                 <section className={styles.sections}>
                     <p>Name</p>
@@ -34,6 +35,7 @@ const Contact =()=>{
                 </section>
                 {isLoading?<MiniSpinner/>:<button  className={styles.submit} onClick={(e)=>submit(e)}>Submit</button>}
             </form>
+            </div>
         </div>
     )
 }
