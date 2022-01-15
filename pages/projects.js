@@ -1,5 +1,4 @@
 import Project from "../components/Project";
-import mi_store from '../public/mi-store/mi-store-desktop.png'
 
 
 const Projects =()=>{
@@ -12,7 +11,7 @@ const Projects =()=>{
         {
             title:"Portfolio",
             description:"A portfolio website built using Next.js and hosted on Versel ",
-            image:mi_store
+            image:'/portfolio/portfolio-desktop.png'
         }
     ]
     return(

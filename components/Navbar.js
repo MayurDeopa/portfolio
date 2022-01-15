@@ -12,7 +12,8 @@ const Navbar=()=>{
         {title:"Contact",link:"contact"}    
     ]
     return(
-        <nav className={styles.navbar}>
+        <div className={styles.navbar_wrapper}>
+            <nav className={styles.navbar}>
             <h3><Link href='/'>Mayur Deopa</Link></h3>
             <ul className={isVisible?`${styles.nav_ul} ${styles.visible}`:styles.nav_ul}>
                 {navItems.map((item,index)=>{
@@ -23,6 +24,7 @@ const Navbar=()=>{
                 <FaBars/>
             </button>
         </nav>
+        </div>
     )
 }
 

@@ -1,10 +1,10 @@
-.navbar{
+.navbar_wrapper{
     position: fixed;
     top: 0;
     left: 0;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     height: 3rem;
     width: 100%;
     padding: 0 1rem;
@@ -12,6 +12,14 @@
     color: black;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     z-index: 10;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    width: min(65rem,100%)
 }
 
 .nav_ul{
