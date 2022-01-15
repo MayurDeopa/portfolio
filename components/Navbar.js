@@ -6,8 +6,7 @@ import { useState } from 'react';
 const Navbar=()=>{
     const [isVisible,setIsVisible] = useState(false)
     const navItems =[
-        {title:"Home",link:"/"},
-        {title:"About",link:"about"},
+        {title:"About",link:"/"},
         {title:"Projects",link:"projects"},
         {title:"Contact",link:"contact"}    
     ]
