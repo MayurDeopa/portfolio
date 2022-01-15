@@ -18,7 +18,7 @@ export default async function handler (req, res) {
       case 'POST':
         try {
           const user = await userEmail.create(req.body)
-          res.status(201).json({ success: true, data: user, message:"you message has been sent" })
+          res.status(201).json({ success: true, data: user})
         } catch (error) {
           res.status(400).json({ success: false , error:error})
         }

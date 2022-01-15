@@ -2,6 +2,8 @@ import { useState } from "react";
 import styles from '../styles/Contact.module.css'
 import MiniSpinner from "../components/MiniSpinner"
 import { postData } from "../lib/postUserDetails";
+import {FaCheck} from 'react-icons/fa'
+import { set } from "mongoose";
 
 const Contact =()=>{
     const [isLoading , setIsLoading]  = useState(false)
@@ -10,12 +12,14 @@ const Contact =()=>{
         email:"",
         message:""
     })
+    const [isSubmitted,setIsSubmitted] = useState(false)
     const submit =async(e)=>{
         e.preventDefault()
+        setIsSubmitted(false)
         setIsLoading(true)
         const res = await postData(contactInfo)
         setIsLoading(false)
-        console.log(res)
+        setIsSubmitted(true)
     }
     return (
         <div className="page">
@@ -36,6 +40,14 @@ const Contact =()=>{
                 {isLoading?<MiniSpinner/>:<button  className={styles.submit} onClick={(e)=>submit(e)}>Submit</button>}
             </form>
             </div>
+            {isSubmitted
+            ?
+            <div className={styles.submitted}>
+                Submitted
+                <FaCheck/>
+            </div>
+            :
+            ""}
         </div>
     )
 }
