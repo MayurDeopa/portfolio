@@ -6,12 +6,12 @@ const Projects =()=>{
         {
             title:"mi-store",
             description:"An E-Commerce Web-App built using React.js ,Node.js, Express,js and MongoDB ",
-            image:'/mi-store/mi-store-desktop.png'
+            image:'/public/mi-store/mi-store-desktop.png'
         },
         {
             title:"Portfolio",
             description:"A portfolio website built using Next.js and hosted on Versel ",
-            image:'/portfolio/portfolio-desktop.png'
+            image:'/public/portfolio/portfolio-desktop.png'
         }
     ]
     return(
