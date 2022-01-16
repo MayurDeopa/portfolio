@@ -27,15 +27,15 @@ const Contact =()=>{
             <form className={styles.form}>
                 <section className={styles.sections}>
                     <p>Name</p>
-                    <input type='text' onChange={(e)=>setContactInfo({...contactInfo,name:e.target.value})} className={styles.input}/>
+                    <input type='text' onChange={(e)=>setContactInfo({...contactInfo,name:e.target.value})} className={styles.input} required/>
                 </section>
                 <section className={styles.sections}>
                     <p>Email</p>
-                    <input type='email' onChange={(e)=>setContactInfo({...contactInfo,email:e.target.value})} className={styles.input}/>
+                    <input type='email' onChange={(e)=>setContactInfo({...contactInfo,email:e.target.value})} className={styles.input} required/>
                 </section>
                 <section className={styles.sections}>
                     <p>Message</p>
-                    <textarea onChange={(e)=>setContactInfo({...contactInfo,message:e.target.value})} className={styles.message}/>
+                    <textarea onChange={(e)=>setContactInfo({...contactInfo,message:e.target.value})} className={styles.message} required/>
                 </section>
                 {isLoading?<MiniSpinner/>:<button  className={styles.submit} onClick={(e)=>submit(e)}>Submit</button>}
             </form>
