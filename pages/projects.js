@@ -1,6 +1,4 @@
 import Project from "../components/Project";
-import miStore from '../public/mi-store-desktop.png'
-import portfolio from '../public/portfolio-desktop.png'
 
 
 const Projects =()=>{
