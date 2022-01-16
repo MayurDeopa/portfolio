@@ -37,7 +37,7 @@ const Contact =()=>{
                     <p>Message</p>
                     <textarea onChange={(e)=>setContactInfo({...contactInfo,message:e.target.value})} className={styles.message}/>
                 </section>
-                {isLoading?<MiniSpinner/>:<button  className={styles.submit} onClick={(e)=>submit(e)}>Submit</button>}
+                {isLoading?<MiniSpinner/>:<input  className={styles.submit} onClick={(e)=>submit(e) } type='submit'></input>}
             </form>
             </div>
             {isSubmitted
