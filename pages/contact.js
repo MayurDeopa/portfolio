@@ -13,13 +13,15 @@ const Contact =()=>{
         message:""
     })
     const [isSubmitted,setIsSubmitted] = useState(false)
+    const [submitMessage, setSubmitMessage] = useState("")
     const submit =async(e)=>{
         e.preventDefault()
         setIsSubmitted(false)
         setIsLoading(true)
         const res = await postData(contactInfo)
+        setSubmitMessage(res.message)
         setIsLoading(false)
-        setIsSubmitted(res.success)
+        setIsSubmitted(true)
     }
     return (
         <div className="page">
@@ -43,8 +45,7 @@ const Contact =()=>{
             {isSubmitted
             ?
             <div className={styles.submitted}>
-                Submitted
-                <FaCheck/>
+                {submitMessage}
             </div>
             :
             ""}

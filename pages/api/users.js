@@ -18,9 +18,9 @@ export default async function handler (req, res) {
       case 'POST':
         try {
           const user = await userEmail.create(req.body)
-          res.status(201).json({ success: true, data: user})
+          res.status(201).json({ success: true, message: "Submitted"})
         } catch (error) {
-          res.status(400).json({ success: false , error:error})
+          res.status(400).json({ success: false , message:error})
         }
         break
       default:
