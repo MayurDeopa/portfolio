@@ -26,6 +26,10 @@ const Project =(props)=>{
                             <FaDatabase/>
                         </div>
                     </section>
+                    <section className={styles.project_buttons_wrapper}>
+                        <a href={details.github} target="_blank" rel="noreferrer" className={styles.project_button}>GitHub</a>
+                        <a href={details.live} target="_blank" rel="noreferrer" className={styles.project_button}>Live</a>
+                    </section>
                 </section>
             </div>
     )

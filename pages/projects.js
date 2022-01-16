@@ -6,12 +6,16 @@ const Projects =()=>{
         {
             title:"mi-store",
             description:"An E-Commerce Web-App built using React.js ,Node.js, Express,js and MongoDB ",
-            image:'/public/mi-store-desktop.png'
+            image:'/mi-store-desktop.png',
+            github:'https://github.com/MayurDeopa',
+            live:'https://blissful-dijkstra-1ee60d.netlify.app'
         },
         {
             title:"Portfolio",
             description:"A portfolio website built using Next.js and hosted on Versel ",
-            image:'/public/portfolio-desktop.png'
+            image:'/portfolio-desktop.png',
+            github:'https://github.com/MayurDeopa',
+            live:"https://portfolio-ten-eta-98.vercel.app/"
         }
     ]
     return(
