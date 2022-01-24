@@ -1,10 +1,13 @@
 import Link from 'next/link';
 import styles from '../styles/Navbar.module.css'
 import {FaBars} from 'react-icons/fa'
-import { useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
+import { MainContext } from '../pages/_app';
+
 
 const Navbar=()=>{
-    const [isVisible,setIsVisible] = useState(false)
+    const {nav} = useContext(MainContext)
+    const [navState, setNavState] = nav
     const navItems =[
         {title:"About",link:"/"},
         {title:"Projects",link:"projects"},
@@ -14,12 +17,13 @@ const Navbar=()=>{
         <div className={styles.navbar_wrapper}>
             <nav className={styles.navbar}>
             <h3><Link href='/'>Mayur Deopa</Link></h3>
-            <ul className={isVisible?`${styles.nav_ul} ${styles.visible}`:styles.nav_ul}>
+            <div className ={navState?`${styles.nav_ul_wrapper} ${styles.wrapper_visible}`: styles.nav_ul_wrapper} onClick={()=>setNavState(false)}></div>
+            <ul className={navState?`${styles.nav_ul} ${styles.visible}`:styles.nav_ul}>
                 {navItems.map((item,index)=>{
-                    return (<li key={index} onClick={()=>setIsVisible(false)}><div className={styles.underline}></div><Link href={item.link}>{item.title}</Link></li>)
+                    return (<li key={index} onClick={()=>setNavState(false)}><div className={styles.underline}></div><Link href={item.link}>{item.title}</Link></li>)
                 })}
             </ul>
-            <button className={isVisible?`${styles.burger} ${styles.rotate}`:styles.burger} onClick={()=>setIsVisible(!isVisible)}>
+            <button className={navState?`${styles.burger} ${styles.rotate}`:styles.burger} onClick={()=>setNavState(!navState)}>
                 <FaBars/>
             </button>
         </nav>

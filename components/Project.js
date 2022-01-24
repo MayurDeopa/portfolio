@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import styles from '../styles/Projects.module.css'
-import { FaDatabase, FaNodeJs, FaReact } from 'react-icons/fa';
 
 const Project =(props)=>{
     const {details} = props
@@ -21,9 +20,9 @@ const Project =(props)=>{
                             TechStack
                         </header>
                         <div className={styles.project_tech_icons}>
-                            <FaReact/>
-                            <FaNodeJs/>
-                            <FaDatabase/>
+                            {details.tech.map((t)=>{
+                                return t
+                            })}
                         </div>
                     </section>
                     <section className={styles.project_buttons_wrapper}>
