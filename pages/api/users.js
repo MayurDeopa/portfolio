@@ -5,7 +5,6 @@ export default async function handler (req, res) {
     const { method } = req
   
     await dbConnect()
-  
     switch (method) {
       case 'GET':
         try {
@@ -18,7 +17,13 @@ export default async function handler (req, res) {
       case 'POST':
         try {
           const user = await userEmail.create(req.body)
-          res.status(201).json({ success: true, message: "Submitted"})
+          const senddata = send(req.body,)
+          try{
+            res.status(201).json({ success: true, message: "Message has been sent"})
+          }catch(error){
+            res.status(400).json({ success: false , message:error})
+          }
+          
         } catch (error) {
           res.status(400).json({ success: false , message:error})
         }

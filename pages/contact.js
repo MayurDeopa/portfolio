@@ -14,6 +14,7 @@ const Contact =()=>{
     const [submitMessage, setSubmitMessage] = useState("")
     const submit =async(e)=>{
         e.preventDefault()
+        console.log(process.env.NEXT_PUBLIC_API_URL)
         setIsSubmitted(false)
         setIsLoading(true)
         const res = await postData(contactInfo)
