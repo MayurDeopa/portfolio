@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import styles from '../styles/Projects.module.css'
+import {DiReact,DiNodejsSmall,DiMongodb} from 'react-icons/di'
 
 const IndividualProject =(props)=>{
     const {details} = props
@@ -20,9 +21,9 @@ const IndividualProject =(props)=>{
                         TechStack
                     </header>
                     <div className={styles.project_tech_icons}>
-                        {details.tech.map((t,index)=>{
-                            return <div key={index}>{t}</div> 
-                        })}
+                        <DiReact/>
+                        <DiNodejsSmall/>
+                        <DiMongodb/>
                     </div>
                 </section>
                 <section className={styles.project_buttons_wrapper}>
