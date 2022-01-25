@@ -1,5 +1,6 @@
 import userEmail from '../../lib/model/user'
 import dbConnect from '../../lib/dbConnect'
+import send from '../../lib/sendMail'
 
 export default async function handler (req, res) {
     const { method } = req
@@ -17,7 +18,7 @@ export default async function handler (req, res) {
       case 'POST':
         try {
           const user = await userEmail.create(req.body)
-          const senddata = send(req.body,)
+          const senddata = send(req.body)
           try{
             res.status(201).json({ success: true, message: "Message has been sent"})
           }catch(error){
@@ -25,7 +26,7 @@ export default async function handler (req, res) {
           }
           
         } catch (error) {
-          res.status(400).json({ success: false , message:error})
+          res.status(400).json({ success: false , message:"Client error"})
         }
         break
       default:
