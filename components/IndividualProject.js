@@ -20,8 +20,8 @@ const IndividualProject =(props)=>{
                         TechStack
                     </header>
                     <div className={styles.project_tech_icons}>
-                        {details.tech.map((t,i)=>{
-                            return <div key={i}>{t}</div> 
+                        {details.tech.map((t,index)=>{
+                            return <div key={index}>{t}</div> 
                         })}
                     </div>
                 </section>
