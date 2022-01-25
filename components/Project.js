@@ -3,8 +3,9 @@ import styles from '../styles/Projects.module.css'
 
 const Project =(props,key)=>{
     const {details} = props
+    const {index } = key
     return (
-        <div className={styles.project} key={key}>
+        <div className={styles.project} key={index}>
             <div className={styles.project_image_container}>
                 <Image src={details.image} className={styles.project_image} layout='intrinsic' width={500} height={300} alt=''/>
             </div>
