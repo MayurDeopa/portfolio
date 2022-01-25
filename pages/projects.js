@@ -1,5 +1,5 @@
-import Project from "../components/Project";
 import {DiReact,DiNodejsSmall,DiMongodb} from 'react-icons/di'
+import IndividualProject from '../components/IndividualProject'
 
 
 const Projects =()=>{
@@ -26,8 +26,8 @@ const Projects =()=>{
     return(
             <div className="page">
                 <h1>Projects</h1>
-                {projects.map((project)=>{
-                    return <Project key={project.id} details={project}/>
+                {projects.map((p)=>{
+                    return <IndividualProject key={p.id} details={p}/>
                 })}
             </div>
     )
