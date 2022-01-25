@@ -1,11 +1,10 @@
 import Image from 'next/image';
 import styles from '../styles/Projects.module.css'
 
-const Project =(props,key)=>{
+const Project =(props)=>{
     const {details} = props
-    const {index } = key
     return (
-        <div className={styles.project} key={index}>
+        <div className={styles.project}>
             <div className={styles.project_image_container}>
                 <Image src={details.image} className={styles.project_image} layout='intrinsic' width={500} height={300} alt=''/>
             </div>
