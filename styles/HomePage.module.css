@@ -35,17 +35,17 @@
     justify-content: center;
     width: min(100%,10rem);
     height: 2rem;
-    background-color: white;
-    color: black;
+    background-color: var(--primary-color);
+    color: var(--complementary-color);
     cursor: pointer;
     transition: 0.2s ease-in-out;
+    border: solid 1px var(--complementary-color);
     border-radius: 20px;
-    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
 }
 
 .home_button:hover{
-    color: white;
-    background-color: black;
+    color: var(--primary-color);
+    background-color: var(--complementary-color);
 }
 
 @media screen and (max-width:550px) {

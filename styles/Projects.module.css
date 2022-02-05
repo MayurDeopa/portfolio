@@ -5,6 +5,7 @@
     width: min(50rem,100%);
     padding: 0.5rem;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    border: solid white 1px;
     border-radius: 4px;
     transition: 0.3s ease-in-out;
 }
@@ -60,14 +61,14 @@
     cursor: pointer;
     transition: 0.2s ease-in-out;
     border-radius: 20px;
-    border:solid 1px black;
-    background-color: white;
-    color: black;
+    border:solid 1px var(--complementary-color);
+    background-color: var(--primary-color);
+    color: var(--complementary-color);
 }
 
 .project_button:hover{
-    background-color: black;
-    color: white;
+    background-color: var(--complementary-color);
+    color: var(--primary-color);
 }
 
 

@@ -3,6 +3,7 @@ import styles from '../styles/Navbar.module.css'
 import {FaBars} from 'react-icons/fa'
 import { useContext, useEffect, useState } from 'react';
 import { MainContext } from '../pages/_app';
+import DarkModeBtn from './DarkModeBtn';
 
 
 const Navbar=()=>{
@@ -23,6 +24,7 @@ const Navbar=()=>{
                     return (<li key={index} onClick={()=>setNavState(false)}><div className={styles.underline}></div><Link href={item.link}>{item.title}</Link></li>)
                 })}
             </ul>
+            <DarkModeBtn/>
             <button className={navState?`${styles.burger} ${styles.rotate}`:styles.burger} onClick={()=>setNavState(!navState)}>
                 <FaBars/>
             </button>
