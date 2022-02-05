@@ -10,8 +10,13 @@ const DarkModeBtn =()=>{
         toggleTheme(param)
     }
     return (
-        <div onClick={()=>toggle(!darkMode)}>
-            <BiMoon/>
+        <div onClick={()=>toggle(!darkMode)} style={{
+            fontSize:"24px",
+            display:"flex",
+            justifyContent:"center",
+            alignItems:"center"
+        }}>
+            {darkMode?<BiSun/>:<BiMoon/>}
         </div>
     )
 }
