@@ -1,22 +1,20 @@
 import { useState } from "react";
 import {BiSun,BiMoon} from "react-icons/bi"
 import { toggleTheme } from "../lib/darkMode/toggleTheme";
+import styles from '../styles/Navbar.module.css'
 
 
 const DarkModeBtn =()=>{
     const [darkMode ,setDarkMode] = useState(false)
-    const toggle =(param)=>{
-        setDarkMode(param)
-        toggleTheme(param)
+    const toggle =()=>{
+        setDarkMode(!darkMode)
+        toggleTheme(!darkMode)
     }
     return (
-        <div onClick={()=>toggle(!darkMode)} style={{
-            fontSize:"24px",
-            display:"flex",
-            justifyContent:"center",
-            alignItems:"center"
-        }}>
-            {darkMode?<BiSun/>:<BiMoon/>}
+        <div onClick={toggle} className={styles.dark_mode_wrapper}>
+            <div className={darkMode?`${styles.dark_mode_toggle_circle} ${styles.right}`:styles.dark_mode_toggle_circle}></div>
+            <BiMoon/>
+            <BiSun/>
         </div>
     )
 }

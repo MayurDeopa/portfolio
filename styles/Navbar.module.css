@@ -10,7 +10,7 @@
     padding: 0 1rem;
     background-color:var(--primary-color);
     color: var(--complementary-color);
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    box-shadow: var(--box-shadow);
     z-index: 100;
 }
 
@@ -73,6 +73,35 @@
 }
 
 
+.dark_mode_wrapper{
+    position: relative;
+    font-size:24px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap: 1.5rem;
+    width: 5rem;
+    border-radius: 20px;
+    border: solid var(--complementary-color) 1px;
+    padding: 0.1rem 0.5rem;
+    overflow-x: hidden;
+}
+
+.dark_mode_toggle_circle{
+    position: absolute;
+    left:0.1rem;
+    top:0;
+    height: calc(100% - 0.2rem);
+    width: 30%;
+    background-color: var(--complementary-color);
+    margin: 0.1rem ;
+    border-radius: inherit;
+    transition: 0.3s ease-in-out;
+}
+
+.right{
+    transform:translateX(3rem);
+}
 
 .burger{
     display: none;
