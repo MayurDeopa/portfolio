@@ -17,18 +17,18 @@ const Navbar=()=>{
     return(
         <div className={styles.navbar_wrapper}>
             <nav className={styles.navbar}>
-            <h3><Link href='/'>Mayur Deopa</Link></h3>
-            <div className ={navState?`${styles.nav_ul_wrapper} ${styles.wrapper_visible}`: styles.nav_ul_wrapper} onClick={()=>setNavState(false)}></div>
-            <ul className={navState?`${styles.nav_ul} ${styles.visible}`:styles.nav_ul}>
-                {navItems.map((item,index)=>{
-                    return (<li key={index} onClick={()=>setNavState(false)}><div className={styles.underline}></div><Link href={item.link}>{item.title}</Link></li>)
-                })}
-            </ul>
-            <DarkModeBtn/>
-            <button className={navState?`${styles.burger} ${styles.rotate}`:styles.burger} onClick={()=>setNavState(!navState)}>
-                <FaBars/>
-            </button>
-        </nav>
+                <h3><Link href='/'>Mayur Deopa</Link></h3>
+                <div className ={navState?`${styles.nav_ul_wrapper} ${styles.wrapper_visible}`: styles.nav_ul_wrapper} onClick={()=>setNavState(false)}></div>
+                <ul className={navState?`${styles.nav_ul} ${styles.visible}`:styles.nav_ul}>
+                    {navItems.map((item,index)=>{
+                        return (<li key={index} onClick={()=>setNavState(false)}><div className={styles.underline}></div><Link href={item.link}>{item.title}</Link></li>)
+                    })}
+                </ul>
+                <DarkModeBtn/>
+                <button className={navState?`${styles.burger} ${styles.rotate}`:styles.burger} onClick={()=>setNavState(!navState)}>
+                    <FaBars/>
+                </button>
+            </nav>
         </div>
     )
 }

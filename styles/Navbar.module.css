@@ -85,6 +85,7 @@
     border: solid var(--complementary-color) 1px;
     padding: 0.1rem 0.5rem;
     overflow-x: hidden;
+    cursor: pointer;
 }
 
 .dark_mode_toggle_circle{
