@@ -1,5 +1,6 @@
 import { Router } from 'next/router'
 import { createContext, useEffect, useState } from 'react'
+import Head from 'next/head'
 import Layout from '../components/Layout'
 import Navbar from '../components/Navbar'
 import Spinner from '../components/Spinner'
@@ -35,6 +36,10 @@ function MyApp({ Component, pageProps }) {
       theme:[darkMode,setDarkMode]
     }}>
       <Layout>
+      <Head>
+            <title>Mayur Deopa</title>
+            <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+          </Head>
         <Navbar/>
         {isLoading?<Spinner/>: <Component {...pageProps} />}
       </Layout>
