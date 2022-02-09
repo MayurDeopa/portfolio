@@ -1,10 +1,15 @@
 import Image from 'next/image';
+import Head from 'next/head'
 import styles from '../styles/HomePage.module.css'
 
 const Home =()=>{
   return (
 
         <div className="page">
+          <Head>
+            <title>Mayur Deopa</title>
+            <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+          </Head>
           <div className={styles.home_page}>
             <section className={styles.home_sections}>
               <header className={styles.home_section_header}>Hi, my name is Mayur,<br/>I am a Web Developer</header>
