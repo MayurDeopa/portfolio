@@ -1,4 +1,6 @@
 import IndividualProject from '../components/IndividualProject'
+import portfolio from '../public/portfolio-desktop.png'
+import miStore from '../public/mi-store-desktop.png'
 
 
 const Projects =()=>{
@@ -7,7 +9,7 @@ const Projects =()=>{
             id:1,
             title:"mi-store",
             description:"An E-Commerce Web-App built using React.js ,Node.js, Express,js and MongoDB ",
-            image:'/mi-store-desktop.png',
+            image:miStore,
             github:'https://github.com/MayurDeopa',
             live:'https://blissful-dijkstra-1ee60d.netlify.app',
         },
@@ -15,7 +17,7 @@ const Projects =()=>{
             id:2,
             title:"Portfolio",
             description:"A portfolio website built using Next.js and hosted on Versel ",
-            image:'/portfolio-desktop.png',
+            image:portfolio,
             github:'https://github.com/MayurDeopa',
             live:"https://portfolio-ten-eta-98.vercel.app",
         }

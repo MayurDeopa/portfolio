@@ -82,7 +82,7 @@
     gap: 1.5rem;
     width: 5rem;
     border-radius: 20px;
-    border: solid var(--complementary-color) 1px;
+    border: solid var(--complementary-color) 2px;
     padding: 0.1rem 0.5rem;
     overflow-x: hidden;
     cursor: pointer;
@@ -132,6 +132,7 @@
     .wrapper_visible{
         display: flex;
         backdrop-filter: blur(3px);
+        
     }
 
     .nav_ul{
@@ -142,6 +143,7 @@
         justify-content: flex-start;
         gap:0.3rem;
         z-index: 50;
+        transition: 0.3s ease-in-out;
     }
 
     .nav_ul li{
