@@ -24,16 +24,7 @@
 }
 
 
-.nav_ul_wrapper{
-    position: fixed;
-    top: 3rem;
-    left: 0;
-    display: none;
-    height: 100%;
-    width: 100%;
-    transition: 0.2s ease-in-out;
-    backdrop-filter: contrast(1);
-}
+
 
 .nav_ul{
     left: -12rem;
@@ -56,6 +47,23 @@
     align-items: center;
     border-radius: 4px;
     cursor: pointer;
+}
+
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right:0 ;
+    bottom: 0;
+    z-index: 40;
+    background-color:rgb(46, 46, 46,0.5);
+    visibility: visible;
+    transition: 0.3s ease-in-out;
+}
+
+.overlay_hidden{
+    visibility: hidden;
+    opacity: 0;
 }
 
 .underline{
@@ -124,7 +132,6 @@
 
 
 
-
 @media screen and (max-width:550px) {
 
 
@@ -138,7 +145,8 @@
     .nav_ul{
         position: fixed;
         width: 12rem;
-        height: 100vh;
+        top: 3rem;
+        bottom: 0;
         flex-direction: column;
         justify-content: flex-start;
         gap:0.3rem;

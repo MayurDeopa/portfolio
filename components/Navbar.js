@@ -18,7 +18,6 @@ const Navbar=()=>{
         <div className={styles.navbar_wrapper}>
             <nav className={styles.navbar}>
                 <h3><Link href='/'>Mayur Deopa</Link></h3>
-                <div className ={navState?`${styles.nav_ul_wrapper} ${styles.wrapper_visible}`: styles.nav_ul_wrapper} onClick={()=>setNavState(false)}></div>
                 <ul className={navState?`${styles.nav_ul} ${styles.visible}`:styles.nav_ul}>
                     {navItems.map((item,index)=>{
                         return (<li key={index} onClick={()=>setNavState(false)}><div className={styles.underline}></div><Link href={item.link}>{item.title}</Link></li>)
@@ -29,6 +28,9 @@ const Navbar=()=>{
                     <FaBars/>
                 </button>
             </nav>
+            <div
+                onClick={()=>setNavState(false)} 
+                className={navState?styles.overlay:`${styles.overlay} ${styles.overlay_hidden}`}></div>
         </div>
     )
 }
