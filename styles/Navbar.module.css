@@ -28,7 +28,7 @@
 
 .nav_ul{
     left: -12rem;
-    top: 3rem;
+    top: 0;
     list-style: none;
     display: flex;
     align-items: center;
