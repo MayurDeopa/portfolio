@@ -1,23 +1,40 @@
 import IndividualProject from '../components/IndividualProject'
-
+import {TbBrandNextjs} from 'react-icons/tb'
+import {DiMongodb,DiCom} from 'react-icons/di'
 
 const Projects =()=>{
     const projects = [
         {
             id:1,
-            title:"mi-store",
-            description:"An E-Commerce Web-App built using React.js ,Node.js, Express,js and MongoDB ",
-            image:'https://i.ibb.co/J2F9C9X/mi-store-desktop.png',
-            github:'https://github.com/MayurDeopa',
-            live:'https://blissful-dijkstra-1ee60d.netlify.app',
-        },
-        {
-            id:2,
             title:"Portfolio",
             description:"A portfolio website built using Next.js and hosted on Versel ",
             image:'https://i.ibb.co/xHTJ7Vc/portfolio-desktop.png',
             github:'https://github.com/MayurDeopa',
             live:"https://portfolio-ten-eta-98.vercel.app",
+            icons:[
+                {
+                    name:'Next.js',
+                    icon:TbBrandNextjs
+                },
+                {
+                    name:'MongoDB',
+                    icon:DiMongodb
+                }
+            ]
+        },
+        {
+            id:2,
+            title:"Anti Matter",
+            description:"An Ecommerce Store",
+            image:'https://i.ibb.co/tKYKBBC/anti.png',
+            github:'https://github.com/MayurDeopa',
+            live:"https://antimatterclothing.vercel.app/",
+            icons:[
+                {
+                    name:'Next.js',
+                    icon:TbBrandNextjs
+                }
+            ]
         }
     ]
     return(
