@@ -145,7 +145,7 @@
     .nav_ul{
         position: fixed;
         width: 12rem;
-        top: 3rem;
+        top: 0;
         bottom: 0;
         flex-direction: column;
         justify-content: flex-start;
