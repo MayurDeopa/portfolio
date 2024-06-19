@@ -4,9 +4,9 @@
     gap: 1rem;
     width: min(50rem,100%);
     padding: 0.5rem;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-    border: solid white 1px;
-    border-radius: 4px;
+    /* box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px; */
+    border: solid black 1px;
+    border-radius: 8px;
     transition: 0.3s ease-in-out;
 }
 

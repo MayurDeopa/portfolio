@@ -24,7 +24,7 @@ const Navbar=()=>{
                     })}
                 </ul>
                 <DarkModeBtn/>
-                <button className={navState?`${styles.burger} ${styles.rotate}`:styles.burger} onClick={()=>setNavState(!navState)}>
+                <button className={styles.burger} onClick={()=>setNavState(!navState)}>
                     <FaBars/>
                 </button>
             </nav>
