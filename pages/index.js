@@ -7,8 +7,8 @@ const Home =()=>{
         <div className="page">
           <div className={styles.home_page}>
             <section className={styles.home_sections}>
-              <header className={styles.home_section_header}>Hi, my name is Mayur,<br/>I am a Web Developer</header>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+              <header className={styles.home_section_header}>Hi, my name is Mayur,<br/>I am a Software Developer</header>
+              <p>Frontend Developer with nearly 2 years of experience creating engaging, responsive, and user-centered web interfaces. Skilled in HTML, CSS, JavaScript, and frameworks like React, I am passionate about building seamless digital experiences that blend functionality with visual appeal. With a strong focus on performance and usability, I transform design concepts into interactive, accessible web solutions. Explore my projects to see how I can bring innovative and efficient front-end solutions to life.</p>
               <div className={styles.home_buttons_wrapper}>
                 <a 
                   className={styles.home_button}
