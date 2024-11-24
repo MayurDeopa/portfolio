@@ -4,6 +4,7 @@ import {DiMongodb} from 'react-icons/di'
 import { useEffect, useState } from 'react'
 import { ProjectsContainer } from '../components/projects/styles'
 import Spinner from '../components/Spinner'
+import { ProjectSkeleton } from '../components/styles'
 
 const Projects =()=>{
 
@@ -15,7 +16,6 @@ const Projects =()=>{
            try{
             const data = await fetch('/api/projects',{method:'GET'})
             const res = await data.json()
-            console.log(res)
             setProjects(res.data)
             setIsLoading(false)
            }catch(error){
@@ -63,7 +63,11 @@ const Projects =()=>{
             <div className="page">
                 <h1>Projects</h1>
                 {isLoading?(
-                    <Spinner/>
+                    <ProjectsContainer>
+                        {Array(20).fill(0).map((p,index)=>{
+                            return <ProjectSkeleton key={index}/>
+                        })}
+                    </ProjectsContainer>
                 ):(
                     <ProjectsContainer>
                         {projects.map((p)=>{

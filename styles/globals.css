@@ -2,9 +2,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Arvo&display=swap');
 
 :root{
-  --primary-color :white;
+  --primary-color :rgb(255, 255, 255);
+  --primary-color-light:rgb(219, 219, 219);
+
   --complementary-color:black;
-  --box-shadow:rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  --box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+
+  --card-bg:rgb(235, 235, 235);
+
+  --complementary-color-2:rgb(41, 41, 41);
+  
 }
 
 * {
