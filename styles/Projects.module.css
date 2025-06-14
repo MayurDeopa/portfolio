@@ -1,86 +1,62 @@
-.project{
-    display: grid;
-    grid-template-columns:60% 40%;
-    gap: 1rem;
-    width: min(50rem,100%);
-    padding: 0.5rem;
-    /* box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px; */
-    border: solid black 1px;
-    border-radius: 8px;
-    transition: 0.3s ease-in-out;
+
+
+.page_wrapper{
+
+    height: 100%;
+    width: 100%;
+    display: flex;
+    /* gap: 0.6px; */
 }
 
-.project_image_container{
-    max-height: 100%;
+.section{
+    /* flex: 1; */
+    padding-top: 4rem;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    color: white;
     display: flex;
-    align-items: center;
     justify-content: center;
-}
-
-.project_image{
-    width: 100%;
-}
-
-.project_details{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
-    gap: 1rem;
-}
-
-.project_header{
-    font-size: 20px;
-}
-
-.project_tech_icons{
-    display: flex;
     align-items: center;
-    gap: 1rem;
-    font-size: 40px;
 }
 
-.project_details_sub_section{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 0.3rem;
+.section_header{
+    font-weight: normal;
+    animation: riseFadeIn 0.8s cubic-bezier(0.25, 0.1, 0.25, 1) 0.4s forwards;
 }
 
-.project_buttons_wrapper{
-    width: 100%;
-    padding: 0.3rem;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    flex-direction: column;
+.slide_in_left {
+    background-color: brown;
+  animation: slide-in-left 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
-.project_button{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 2rem;
-    cursor: pointer;
-    transition: 0.2s ease-in-out;
-    border-radius: 20px;
-    border:solid 1px var(--complementary-color);
-    background-color: var(--primary-color);
-    color: var(--complementary-color);
+.slide_in_right {
+  animation: slide-in-right 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
-.project_button:hover{
-    background-color: var(--complementary-color);
-    color: var(--primary-color);
-}
-
-
-
-@media screen and (max-width:550px) {
-    .project{
-        display: flex;
-        align-items: center;
-        flex-direction: column;
+@keyframes slide-in-left {
+    0% {
+        transform: translateX(-100%);
     }
+
+    /* 50%{
+        transform: translateX(-100px);
+    } */
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide-in-right {
+    0% {
+        transform: translateX(100%);
+    }
+
+    /* 50%{
+        transform: translateX(-200px);
+    } */
+    100% {
+        transform: translateX(0);
+    }
+    
 }

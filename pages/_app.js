@@ -23,23 +23,23 @@ function MyApp({ Component, pageProps }) {
     y: 0
   });
 
-  useEffect(() => {
-    const handleMouseMove = (event) => {
-      setCursorPosition({
-        x: event.clientX,
-        y: event.clientY
-      });
-    };
+  // useEffect(() => {
+  //   const handleMouseMove = (event) => {
+  //     setCursorPosition({
+  //       x: event.clientX,
+  //       y: event.clientY
+  //     });
+  //   };
 
-    // Add the mousemove event listener
-    document.addEventListener('mousemove', handleMouseMove);
+  //   // Add the mousemove event listener
+  //   document.addEventListener('mousemove', handleMouseMove);
 
-    // Cleanup the event listener on component unmount
-    return () => {
-      document.removeEventListener('mousemove', handleMouseMove);
-    };
-  }
-  , []);
+  //   // Cleanup the event listener on component unmount
+  //   return () => {
+  //     document.removeEventListener('mousemove', handleMouseMove);
+  //   };
+  // }
+  // , []);
 
   useEffect(() => {
     // setMounted(true)
@@ -63,7 +63,7 @@ function MyApp({ Component, pageProps }) {
       theme:[darkMode,setDarkMode]
     }}>
       <Layout>
-      <Cursor x={cursorPosition.x} y={cursorPosition.y} />
+      {/* <Cursor x={cursorPosition.x} y={cursorPosition.y} /> */}
       <Head>
             <title>Mayur Deopa</title>
             <meta name="viewport" content="initial-scale=1.0, width=device-width" />
