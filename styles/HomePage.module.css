@@ -50,8 +50,24 @@
     background-color: var(--complementary-color);
 }
 
+
+@media screen and (max-width:780px) {
+    .home_section_header{
+    font-size: 80px;
+    line-height:100px;
+    text-align: center  ;
+}
+}
+
 @media screen and (max-width:550px) {
     .home_page{
         gap: 0;
     }
+    .home_section_header{
+    font-size: 60px;
+    line-height:100px;
+    text-align: center  ;
 }
+}
+
+

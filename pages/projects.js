@@ -60,7 +60,7 @@ const Projects =()=>{
     //     }
     // ]
     return(
-            <div className="page">
+            <div className="page" style={{animation:"riseFadeIn 0.6s cubic-bezier(0.25, 0.1, 0.25, 1) forwards"}}>
                 <h1>Projects</h1>
                 {isLoading?(
                     <ProjectsContainer>

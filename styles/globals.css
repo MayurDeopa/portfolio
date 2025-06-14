@@ -21,11 +21,14 @@
   letter-spacing: 0.2em;
 }
 
-body{
- background: #3F5EFB;
-background: radial-gradient(circle, rgba(63, 94, 251, 1) 60%, rgba(252, 70, 107, 1) 100%);
-/* background: radial-gradient(circle, var(--primary-color-light) 60%, var(--primary-color) 100%); */
+body {
+  margin: 0;
+  background: radial-gradient(circle, rgba(63, 94, 251, 1) 60%, rgba(252, 70, 107, 1) 100%);
+  background-size: 150% 150%;
+  animation: move-bg 10s linear infinite;
   color: var(--complementary-color);
+  cursor: none;
+  font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
 a {
@@ -78,3 +81,16 @@ input:focus{
   }
 }
 
+
+
+@keyframes move-bg {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

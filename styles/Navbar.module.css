@@ -10,7 +10,7 @@
     padding: 0 1rem;
     /* background-color:var(--primary-color-light); */
     color: var(--complementary-color);
-    backdrop-filter: blur(4px);
+    /* backdrop-filter: blur(4px);   */
     /* box-shadow: var(--box-shadow); */
     z-index: 100;
    animation: fade-in 0.6s cubic-bezier(0.25, 0.1, 0.25, 1) 0.3s forwards;
@@ -157,7 +157,8 @@
         gap:0.3rem;
         z-index: 50;
         transition: 0.3s ease-in-out;
-        background-color: var(--primary-color);
+     backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.05);
     }
 
     .nav_ul li{

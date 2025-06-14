@@ -27,7 +27,10 @@ export const ProjectWrapper = styled.div`
     display:flex;
     /* border: solid var(--complementary-color) 1px; */
     /* box-shadow:var(--box-shadow); */
-    background-color:var(--card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.2); /* subtle edge */
+     backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     width:100%;
     max-width:300px;
