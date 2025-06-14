@@ -1,28 +1,30 @@
-@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Arvo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
 
-:root{
-  --primary-color :rgb(255, 255, 255);
-  --primary-color-light:rgb(219, 219, 219);
+/* @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap'); */
 
-  --complementary-color:black;
-  --box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
-
-  --card-bg:rgb(235, 235, 235);
-
-  --complementary-color-2:rgb(41, 41, 41);
-  
+:root {
+  --primary-color: #001524;
+  --complementary-color: white;
+  --box-shadow: rgba(255, 255, 255, 0.16) 0px 1px 4px;
+  --card-bg: #16364d;
+  --complementary-color-2: rgb(212, 212, 212);
+  --primary-color-light: #10324b;
 }
+
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Varela Round', sans-serif;
+  /* font-family: ',Inter' ,'Varela Round', sans-serif; */
+  font-family: "Orbitron", sans-serif;
+  letter-spacing: 0.2em;
 }
 
 body{
-  background-color: var(--primary-color);
+ background: #3F5EFB;
+background: radial-gradient(circle, rgba(63, 94, 251, 1) 60%, rgba(252, 70, 107, 1) 100%);
+/* background: radial-gradient(circle, var(--primary-color-light) 60%, var(--primary-color) 100%); */
   color: var(--complementary-color);
 }
 
@@ -40,10 +42,10 @@ a {
   align-items: center;
   flex-direction: column;
   gap: 2rem;
-  background-color: var(--primary-color);
+  /* background-color: var(--primary-color); */
+  
   color: var(--complementary-color);
-  animation-name: drop ;
-  animation-duration: 1s;
+  /* animation: riseFadeIn 0.8s cubic-bezier(0.25, 0.1, 0.25, 1)  forwards; */
 }
 
 .cover{
@@ -62,11 +64,17 @@ input:focus{
   outline: none;
 }
 
-@keyframes drop {
-  0%{
-    opacity:0;
+@keyframes riseFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+    /* filter: blur(4px); */
   }
-  100%{
+
+  100% {
     opacity: 1;
+    transform: translateY(0);
+    /* filter: blur(0); */
   }
 }
+

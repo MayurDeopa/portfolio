@@ -1,6 +1,6 @@
 .navbar_wrapper{
     position: fixed;
-    top: 0;
+    top: -3rem;
     left: 0;
     display: flex;
     align-items: center;
@@ -8,11 +8,13 @@
     height: 3rem;
     width: 100%;
     padding: 0 1rem;
-    background-color:var(--primary-color-light);
+    /* background-color:var(--primary-color-light); */
     color: var(--complementary-color);
     backdrop-filter: blur(4px);
     /* box-shadow: var(--box-shadow); */
     z-index: 100;
+   animation: fade-in 0.6s cubic-bezier(0.25, 0.1, 0.25, 1) 0.3s forwards;
+
 }
 
 .navbar{
@@ -168,5 +170,14 @@
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+}
+
+@keyframes fade-in {
+    /* 0%{
+        transform: translateY(-100%);
+    } */
+    100%{
+        top:0;
     }
 }

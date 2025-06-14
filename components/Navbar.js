@@ -14,10 +14,12 @@ const Navbar=()=>{
         {title:"Projects",link:"projects"},
         {title:"Contact",link:"contact"}    
     ]
+
+    // return null
     return(
         <div className={styles.navbar_wrapper}>
             <nav className={styles.navbar}>
-                <h3><Link href='/'>Mayur Deopa</Link></h3>
+                <h3 style={{fontWeight:'normal'}}><Link href='/'>Mayur Deopa</Link></h3>
                 <ul className={navState?`${styles.nav_ul} ${styles.visible}`:styles.nav_ul}>
                     {navItems.map((item,index)=>{
                         return (<li key={index} onClick={()=>setNavState(false)}><div className={styles.underline}></div><Link href={item.link}>{item.title}</Link></li>)
